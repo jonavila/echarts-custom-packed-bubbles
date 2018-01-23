@@ -1,0 +1,53 @@
+{
+  "name": "bubbles",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "author": "Jonathan Avila <jonathan@zoomdata.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "build": "webpack --env production",
+    "start": "webpack --env development"
+  },
+  "lint-staged": {
+    "src/**/*.{js,css}": [
+      "prettier --write --single-quote --trailing-comma=all",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "autoprefix": "^1.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.9",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.0.10",
+    "prettier": "^1.10.2",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "d3-hierarchy": "^1.1.5",
+    "echarts": "^4.0.2"
+  }
+}
